@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import * as S from './FilsaPage.style'
 import getRandomParagraph from '../hooks/useRandomParagraph';
 import worksData from '../data/works-jp.json'; 
+import Sidebar from './Sidebar/Sidebar';
 
 const JapaneseFilsa = () => {
   const [quote, setQuote] = useState(null);
@@ -17,14 +18,16 @@ const JapaneseFilsa = () => {
   };
 
   return (
+    <>
+    <Sidebar />
     <S.FilsaItem>
       <S.Title>일본 문학 필사하기</S.Title>
       {quote ? (
         <S.ParagraphWrapper>
-          <S.Paragragh>
+          <S.Paragragh key={quote.paragraph}>
             {quote.paragraph}
           </S.Paragragh>
-          <S.Info>
+          <S.Info key={quote.author + quote.title}>
             ― {quote.author} &lt;{quote.title}&gt; ({quote.year})
           </S.Info>
           <S.LoadAnotherButton
@@ -38,6 +41,7 @@ const JapaneseFilsa = () => {
         <p>불러오는 중...</p>
       )}
     </S.FilsaItem>
+    </>
   );
 };
 
