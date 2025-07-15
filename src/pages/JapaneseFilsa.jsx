@@ -2,7 +2,9 @@ import React, { useEffect, useState } from 'react';
 import * as S from './FilsaPage.style'
 import getRandomParagraph from '../hooks/useRandomParagraph';
 import worksData from '../data/works-jp.json'; 
-import Sidebar from './Sidebar/Sidebar';
+
+import Sidebar from '../components/Sidebar/Sidebar';
+import DictionaryMenu from '../components/DictionaryMenu/DictionaryMenu';
 
 const JapaneseFilsa = () => {
   const [quote, setQuote] = useState(null);
@@ -20,6 +22,7 @@ const JapaneseFilsa = () => {
   return (
     <>
     <Sidebar />
+    <DictionaryMenu />
     <S.FilsaItem>
       <S.Title>일본 문학 필사하기</S.Title>
       {quote ? (
