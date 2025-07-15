@@ -15,6 +15,7 @@ export const Title = styled.h1`
 `;
 
 export const Paragragh = styled.span`
+  height: 30vh;
   whiteSpace: 'pre-line'
 `;
 
@@ -41,6 +42,7 @@ export const LoadAnotherButton = styled.button`
   border-radius: 8px;
   outline: none;
   cursor: pointer;
+  align-self: center;
 
   &:hover {
     background-color: #f0f0f0;
