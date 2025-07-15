@@ -28,3 +28,7 @@ export const StyledLink = styled(Link)`
     background-color: #f0f0f0;
   }
 `;
+
+export const Paragragh = styled.span`
+  white-space: pre-line;
+`;
