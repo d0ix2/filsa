@@ -25,7 +25,7 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalBox = styled.div`
-  background-color: white;
+  background-color: ${(props) => props.theme.color.white};
   padding: 2rem;
   border-radius: 12px;
   width: 90%;
@@ -61,6 +61,6 @@ export const ModalButton = styled.button`
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${(props) => props.theme.color.white};
   }
 `;
