@@ -1,6 +1,6 @@
 import styled, { keyframes } from 'styled-components';
 
-// 페이드 인 애니메이션 정의
+// 페이드 인 애니메이션
 const fadeInUp = keyframes`
   from {
     opacity: 0;
