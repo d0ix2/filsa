@@ -7,7 +7,7 @@ export const SidebarWrapper = styled.div`
   top: 0;
   height: 100vh;
   width: 200px;
-  background-color: #f9f9f9;
+  background-color: ${(props) => props.theme.color.black};;
   border-right: 1px solid #ddd;
   display: flex;
   flex-direction: column;
@@ -19,11 +19,11 @@ export const SidebarWrapper = styled.div`
 
 export const NavLink = styled(Link)`
   font-size: 1.2rem;
-  color: #333;
+  color: ${(props) => props.theme.color.white};
   text-decoration: none;
 
   &:hover {
-    color: #B2B1B2;
+    color: ${(props) => props.theme.color.gray2};
     font-weight: bold;
   }
 `;
