@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import * as S from './FilsaPage.style'
-import getRandomParagraph from '../hooks/useRandomParagraph';
-import worksData from '../data/works-ko.json'; 
+import getRandomParagraph from '../../hooks/useRandomParagraph';
+import worksData from '../../data/works-ko.json'; 
 
-import Sidebar from '../components/Sidebar/Sidebar';
-import DictionaryMenu from '../components/DictionaryMenu/DictionaryMenu';
+import Sidebar from '../../components/Sidebar/Sidebar';
+import DictionaryMenu from '../../components/DictionaryMenu/DictionaryMenu';
 
 const KoreanFilsa = () => {
   const [quote, setQuote] = useState(null);
