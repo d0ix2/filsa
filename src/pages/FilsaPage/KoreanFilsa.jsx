@@ -23,8 +23,12 @@ const KoreanFilsa = () => {
     <>
       <Sidebar />
       <DictionaryMenu />
-      <S.FilsaItem>
-        <S.Title>한국 문학 필사하기</S.Title>
+      <S.Container>
+        <S.TitleWrapper>
+        <S.MainTitle>filsa</S.MainTitle>
+        <S.Divider />
+        <S.SubTitle>한국 문학 필사하기</S.SubTitle>
+        </S.TitleWrapper>
         {quote ? (
           <S.ParagraphWrapper>
             <S.Paragragh key={quote.paragraph}>{quote.paragraph}</S.Paragragh>
@@ -38,7 +42,7 @@ const KoreanFilsa = () => {
         ) : (
           <p>불러오는 중...</p>
         )}
-      </S.FilsaItem>
+      </S.Container>
     </>
   );
 };

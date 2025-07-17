@@ -5,7 +5,7 @@ export const GlobalStyle = createGlobalStyle`
     font-optical-sizing: auto;
     font-style: normal;
     display: flex;
-    justify-content: center;
+    align-items: flex-start;
     background-color: ${(props) => props.theme.color.background};
     }
 

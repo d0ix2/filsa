@@ -29,7 +29,7 @@ const Popup = () => {
         <S.ParagraghWrapper>
             <S.BoldText>filsa란?</S.BoldText>
             <S.PlainText>
-                하루에 한 문단씩 필사하며 언어를 공부할 수 있는 서비스입니다.
+                filsa는 하루에 한 문단씩 필사하며 언어를 공부할 수 있는 서비스입니다.
                 저작권이 만료된 검증된 문학 작품들 중에서 한 문단을 무작위로 골라 제공합니다.
                 문학 작품을 통해 어휘력과 문장력을 함께 키워 보세요.
             </S.PlainText>

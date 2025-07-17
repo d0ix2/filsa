@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const PopupWrapper = styled.div`
   position: fixed;
   top: 50%;
-  left: 50%;
+  right: 50%;
   transform: translate(-50%, -50%); // 중앙 정렬
   width: 90vw;
   max-width: 450px;
@@ -20,7 +20,7 @@ export const PopupWrapper = styled.div`
 
   @media (min-width: 768px) {
     top: 80px;
-    left: 80px;
+    right: 80px;
     transform: none;
     width: auto;
     max-height: none;

@@ -3,12 +3,12 @@ import { Link } from 'react-router-dom';
 
 export const SidebarWrapper = styled.div`
   position: fixed;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-220px')}; /* 열림, 닫힘 */
+  right: ${({ isOpen }) => (isOpen ? '0' : '-220px')}; /* 열림, 닫힘 */
   top: 0;
   height: 100vh;
   width: 200px;
   background-color: ${(props) => props.theme.color.primary};
-  border-right: 1px solid ${(props) => props.theme.color.border};
+  border-left: 1px solid ${(props) => props.theme.color.border};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,7 +32,7 @@ export const NavLink = styled(Link)`
 export const HamburgerButton = styled.button`
   position: fixed;
   top: 20px;
-  left: 20px;
+  right: 20px;
   background: none;
   color: ${(props) => props.theme.color.primary};
   border: none;
@@ -44,7 +44,7 @@ export const HamburgerButton = styled.button`
 export const Overlay = styled.div`
   position: fixed;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.05);
