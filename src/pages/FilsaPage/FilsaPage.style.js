@@ -15,6 +15,8 @@ const fadeInUp = keyframes`
 // 반응형으로 변경
 export const FilsaItem = styled.div`
   min-height: 100vh;
+  width: 100%;
+  max-width: 500px;
   padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
