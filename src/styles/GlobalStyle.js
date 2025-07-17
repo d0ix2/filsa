@@ -1,8 +1,19 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Petit+Formal+Script&family=Petrona:ital,wght@0,100..900;1,100..900&display=swap');
+import { createGlobalStyle } from 'styled-components';
 
-/* reset */
+export const GlobalStyle = createGlobalStyle`
+  body {
+    font-optical-sizing: auto;
+    font-style: normal;
+    background-color: ${(props) => props.theme.color.background};
+    }
 
-html,
+  button {
+    outline: none;
+    border: none;
+    cursor: pointer;
+  }
+
+  html,
 body,
 header,
 nav,
@@ -64,17 +75,4 @@ a {
   color: inherit;
   text-decoration: none;
 }
-
-button {
-  outline: none;
-  border: none;
-  cursor: pointer;
-}
-
-body {
-  font-family: 'Noto Sans KR', Inter, system-ui, Avenir, Helvetica, Arial,
-    sans-serif;
-  font-optical-sizing: auto;
-  font-style: normal;
-  background-color: #FFFFFF;
-}
+`;

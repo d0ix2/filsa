@@ -69,7 +69,11 @@ export default function GamePage() {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter' && !isPaused && input.trim() === targetSentence?.text.trim()) {
+    if (
+      e.key === 'Enter' &&
+      !isPaused &&
+      input.trim() === targetSentence?.text.trim()
+    ) {
       const nextCount = sentenceCount + 1;
       setSentenceCount(nextCount);
 
@@ -109,9 +113,17 @@ export default function GamePage() {
       if (inputChars[index] == null) {
         return <span key={index}>{char}</span>;
       } else if (inputChars[index] === char) {
-        return <span key={index} style={{ color: 'black' }}>{char}</span>;
+        return (
+          <span key={index} style={{ color: 'black' }}>
+            {char}
+          </span>
+        );
       } else {
-        return <span key={index} style={{ color: 'red' }}>{char}</span>;
+        return (
+          <span key={index} style={{ color: 'red' }}>
+            {char}
+          </span>
+        );
       }
     });
 
@@ -135,9 +147,8 @@ export default function GamePage() {
           <span>진행: {sentenceCount} / 10</span>
         </S.InfoWrapper>
 
-        <S.Paragragh 
-            key={targetSentence?.text}>
-            {displaySpans.length > 0
+        <S.Paragragh key={targetSentence?.text}>
+          {displaySpans.length > 0
             ? displaySpans
             : targetSentence?.text || '게임을 시작하세요'}
         </S.Paragragh>
@@ -160,13 +171,13 @@ export default function GamePage() {
         )}
 
         {/* ⏸ 일시 정지 / ▶ 재개 버튼 */}
-        {isStarted && !isGameFinished && (
-          isPaused ? (
+        {isStarted &&
+          !isGameFinished &&
+          (isPaused ? (
             <S.Button onClick={handleResume}>▶ 다시 시작</S.Button>
           ) : (
             <S.Button onClick={handlePause}>⏸ 일시 정지</S.Button>
-          )
-        )}
+          ))}
 
         {/* 결과 모달 */}
         {isGameFinished && (

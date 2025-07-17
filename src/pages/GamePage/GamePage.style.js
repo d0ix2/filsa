@@ -25,8 +25,8 @@ export const InfoWrapper = styled.div`
   width: 60vh;
   display: flex;
   justify-content: space-between;
-  fontSize: 1rem;
-`
+  fontsize: 1rem;
+`;
 
 export const Title = styled.h1`
   margin-bottom: 2rem;
@@ -43,12 +43,12 @@ export const Paragragh = styled.span`
 export const AnswerInput = styled.input`
   width: 60vh;
   padding: 1rem;
-  fontSize: 1rem;
+  fontsize: 1rem;
   outline: none;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  border: 1px solid ${(props) => props.theme.color.border};
+  background-color: ${(props) => props.theme.color.background};
   border-radius: 8px;
-`
+`;
 
 export const Button = styled.button`
   width: 30vh;
@@ -56,7 +56,7 @@ export const Button = styled.button`
   font-size: 1.2rem;
   text-decoration: none;
   background-color: transparent;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.color.border};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   outline: none;
@@ -64,6 +64,6 @@ export const Button = styled.button`
   align-self: center;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${(props) => props.theme.color.border};
   }
 `;

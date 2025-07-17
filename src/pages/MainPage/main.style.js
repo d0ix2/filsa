@@ -20,12 +20,12 @@ export const StyledLink = styled(Link)`
   font-size: 1.2rem;
   text-decoration: none;
   color: #333;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.color.border};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${(props) => props.theme.color.border};
   }
 `;
 
