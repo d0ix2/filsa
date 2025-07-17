@@ -48,6 +48,11 @@ pre {
   box-sizing: border-box;
   font: inherit;
   vertical-align: baseline;
+
+  *::placeholder {
+  color: inherit;
+  opacity: 1; /* Safari에서 placeholder 흐릿하게 나오는 문제 방지 */
+}
 }
 
 p,
@@ -75,4 +80,5 @@ a {
   color: inherit;
   text-decoration: none;
 }
-`;
+`
+;

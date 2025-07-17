@@ -10,7 +10,7 @@ export default function GamePage() {
   const [input, setInput] = useState('');
   const [displaySpans, setDisplaySpans] = useState([]);
   const [isStarted, setIsStarted] = useState(false);
-  const [isPaused, setIsPaused] = useState(false); // ✅ 추가
+  const [isPaused, setIsPaused] = useState(false); // 추가
   const [isGameFinished, setIsGameFinished] = useState(false);
   const [sentenceCount, setSentenceCount] = useState(0);
   const [elapsedTime, setElapsedTime] = useState(0);
@@ -38,7 +38,7 @@ export default function GamePage() {
     setTargetSentence(getRandomSentence());
     setInput('');
     setIsStarted(true);
-    setIsPaused(false); // ✅ 시작 시 일시정지 해제
+    setIsPaused(false); // 시작 시 일시정지 해제
     setIsGameFinished(false);
     setSentenceCount(0);
     setElapsedTime(0);
@@ -114,7 +114,7 @@ export default function GamePage() {
         return <span key={index}>{char}</span>;
       } else if (inputChars[index] === char) {
         return (
-          <span key={index} style={{ color: 'black' }}>
+          <span key={index} style={{ fontWeight: '800' }}>
             {char}
           </span>
         );
@@ -170,7 +170,7 @@ export default function GamePage() {
           <S.Button onClick={handleStart}>▶ 게임 시작</S.Button>
         )}
 
-        {/* ⏸ 일시 정지 / ▶ 재개 버튼 */}
+        {/* 일시 정지 / 재개 버튼 */}
         {isStarted &&
           !isGameFinished &&
           (isPaused ? (

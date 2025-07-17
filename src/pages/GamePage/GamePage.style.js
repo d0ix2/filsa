@@ -39,6 +39,7 @@ export const Title = styled.h1`
 export const Paragragh = styled.span`
   white-space: pre-line;
   font-size: 1.2rem;
+  font-weight: 500;
   animation: ${fadeInUp} 0.5s ease-out;
   color: ${(props) => props.theme.color.primary};
 `;
@@ -46,12 +47,16 @@ export const Paragragh = styled.span`
 export const AnswerInput = styled.input`
   width: 60vh;
   padding: 1rem;
-  fontsize: 1rem;
+  font-size: 1rem;
   outline: none;
   border: 1px solid ${(props) => props.theme.color.border};
   background-color: ${(props) => props.theme.color.background};
   color: ${(props) => props.theme.color.border};
   border-radius: 8px;
+
+  ::placeholder {
+    color: ${(props) => props.theme.color.primary};
+  }
 `;
 
 export const Button = styled.button`

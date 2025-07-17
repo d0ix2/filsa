@@ -37,17 +37,17 @@ const Popup = () => {
         <S.ParagraghWrapper>
             <S.BoldText>주요 기능</S.BoldText>
             <S.PlainText>
-                1. 모르는 단어가 있으신가요? 마우스로 드래그해 우클릭해 보세요.
+                1. 모르는 단어가 있으신가요? <S.HighlightedText>마우스로 드래그해 우클릭</S.HighlightedText>해 보세요.
                 네이버 사전을 이용해 모르는 단어를 바로 검색할 수 있습니다.
             </S.PlainText>
             <S.PlainText>
-                2. 타이핑 연습이 필요하신가요? '한국어 타이핑 게임' 메뉴를 이용해 보세요.
+                2. 타이핑 연습이 필요하신가요? <S.HighlightedText>'한국어 타이핑 게임' 메뉴</S.HighlightedText>를 이용해 보세요.
                 문학 작품에서 랜덤으로 가져 온 문장을 이용해 타이핑을 연습할 수 있습니다.
                 타이핑에 걸린 총 소요 시간을 측정해 드려요.
             </S.PlainText>
             <S.PlainText>
                 3. 테마를 변경하고 싶으신가요?
-                내 취향에 맞는 컬러의 테마를 이용해 보세요.
+                내 취향에 맞는 <S.HighlightedText>컬러 테마</S.HighlightedText>를 이용해 보세요.
                 라이트, 다크뿐만 아니라 핑크, 블루 등 여러 가지 컬러의 테마를 준비했어요.
             </S.PlainText>
         </S.ParagraghWrapper>
