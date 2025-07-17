@@ -1,4 +1,4 @@
-import styled, { keyframes } from 'styled-components';
+import styled, { keyframes, css } from 'styled-components';
 
 // 페이드 인 애니메이션
 const fadeInUp = keyframes`
@@ -9,6 +9,19 @@ const fadeInUp = keyframes`
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+`;
+
+// 깜빡임 애니메이션
+const blink = keyframes`
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
   }
 `;
 
@@ -30,7 +43,7 @@ export const GameWrapper = styled.div`
 
 export const InfoWrapper = styled.div`
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
@@ -60,7 +73,7 @@ export const Paragragh = styled.span`
 
 export const AnswerInput = styled.input`
   width: 100%;
-  max-width: 600px;
+  max-width: 500px;
   padding: 1rem;
   font-size: 1rem;
   outline: none;
@@ -88,6 +101,12 @@ export const Button = styled.button`
   outline: none;
   cursor: pointer;
   align-self: center;
+
+  ${(props) =>
+    props.blink &&
+    css`
+      animation: ${blink} 1s infinite;
+    `}
 
   &:hover {
     background-color: ${(props) => props.theme.color.border};
