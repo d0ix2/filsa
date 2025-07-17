@@ -16,6 +16,7 @@ export const GameWrapper = styled.div`
   height: 100vh;
   display: flex;
   gap: 30px;
+  padding: 1.5rem;
   flex-direction: column;
   justify-content: center;
   align-items: center;

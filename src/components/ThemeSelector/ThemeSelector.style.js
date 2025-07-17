@@ -5,7 +5,6 @@ export const ThemeSelectorWrapper = styled.div`
   top: 20px;
   right: 20px;
   text-align: right;
-  z-index: 9999;
 `;
 
 export const ToggleButton = styled.div`

@@ -30,6 +30,7 @@ export const Title = styled.h1`
 export const Paragragh = styled.span`
   white-space: pre-line;
   font-size: 1.1rem;
+  padding: 0 1.5rem;
   animation: ${fadeInUp} 0.5s ease-out;
   color: ${(props) => props.theme.color.primary};
 `;
@@ -37,6 +38,7 @@ export const Paragragh = styled.span`
 export const Info = styled.span`
   white-space: pre-line;
   font-size: 1.2rem;
+  padding: 0 1.5rem;
   font-weight: 800;
   animation: ${fadeInUp} 0.5s ease-out;
   color: ${(props) => props.theme.color.primary};

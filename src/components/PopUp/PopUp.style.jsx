@@ -1,19 +1,32 @@
 import styled from 'styled-components';
 
 export const PopupWrapper = styled.div`
-  border-radius: 8px;
   position: fixed;
-  top: 80px;         
-  left: 80px;       
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); // 중앙 정렬
+  width: 90vw;
   max-width: 450px;
+  max-height: 90vh;
+  overflow-y: auto;
+
   padding: 1.5rem;
   gap: 2rem;
   background-color: ${(props) => props.theme.color.background};
   border: 1px solid ${(props) => props.theme.color.border};
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
   z-index: 1000;
-  border-radius: border-radius: 8px;
+
+  @media (min-width: 768px) {
+    top: 80px;
+    left: 80px;
+    transform: none;
+    width: auto;
+    max-height: none;
+  }
 `;
+
 
 export const CloseWrapper = styled.div`
   display: flex;
