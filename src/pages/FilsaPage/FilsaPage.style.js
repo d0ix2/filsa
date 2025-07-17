@@ -50,7 +50,7 @@ export const LoadAnotherButton = styled.button`
   font-size: 1.2rem;
   text-decoration: none;
   background-color: transparent;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.color.border};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   outline: none;
@@ -58,6 +58,6 @@ export const LoadAnotherButton = styled.button`
   align-self: center;
 
   &:hover {
-    background-color: #f0f0f0;
+    background-color: ${(props) => props.theme.color.border};
   }
 `;

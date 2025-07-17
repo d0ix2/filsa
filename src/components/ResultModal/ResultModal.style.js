@@ -16,7 +16,10 @@ const fadeInUp = keyframes`
 
 export const ModalOverlay = styled.div`
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background-color: rgba(0, 0, 0, 0.6);
   display: flex;
   align-items: center;
@@ -25,7 +28,7 @@ export const ModalOverlay = styled.div`
 `;
 
 export const ModalBox = styled.div`
-  background-color: ${(props) => props.theme.color.white};
+  background-color: ${(props) => props.theme.color.background};
   padding: 2rem;
   border-radius: 12px;
   width: 90%;
@@ -54,13 +57,13 @@ export const ButtonGroup = styled.div`
 export const ModalButton = styled.button`
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid ${(props) => props.theme.color.border};
   border-radius: 8px;
   background-color: transparent;
   cursor: pointer;
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: ${(props) => props.theme.color.white};
+    background-color: ${(props) => props.theme.color.background};
   }
 `;
