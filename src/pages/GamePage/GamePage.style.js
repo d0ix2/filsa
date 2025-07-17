@@ -12,22 +12,35 @@ const fadeInUp = keyframes`
   }
 `;
 
+// 반응형으로 변경
 export const GameWrapper = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
   display: flex;
-  gap: 30px;
-  padding: 1.5rem;
   flex-direction: column;
+  gap: 30px;
   justify-content: center;
   align-items: center;
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
 `;
 
 export const InfoWrapper = styled.div`
-  width: 60vh;
+  width: 100%;
+  max-width: 600px;
   display: flex;
   justify-content: space-between;
-  fontsize: 1rem;
+  font-size: 1rem;
   color: ${(props) => props.theme.color.primary};
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
 `;
 
 export const Title = styled.h1`
@@ -46,7 +59,8 @@ export const Paragragh = styled.span`
 `;
 
 export const AnswerInput = styled.input`
-  width: 60vh;
+  width: 100%;
+  max-width: 600px;
   padding: 1rem;
   font-size: 1rem;
   outline: none;
@@ -61,7 +75,8 @@ export const AnswerInput = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 30vh;
+  width: 100%;
+  max-width: 300px;
   margin: 0.5rem 0;
   font-size: 1.2rem;
   text-decoration: none;
@@ -78,3 +93,4 @@ export const Button = styled.button`
     background-color: ${(props) => props.theme.color.border};
   }
 `;
+

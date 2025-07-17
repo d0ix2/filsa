@@ -12,13 +12,22 @@ const fadeInUp = keyframes`
   }
 `;
 
+// 반응형으로 변경
 export const FilsaItem = styled.div`
-  height: 100vh;
+  min-height: 100vh;
+  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 3rem;
+  }
 `;
+
 
 export const Title = styled.h1`
   margin-bottom: 2rem;
@@ -30,7 +39,6 @@ export const Title = styled.h1`
 export const Paragragh = styled.span`
   white-space: pre-line;
   font-size: 1.1rem;
-  padding: 0 1.5rem;
   animation: ${fadeInUp} 0.5s ease-out;
   color: ${(props) => props.theme.color.primary};
 `;
@@ -38,14 +46,13 @@ export const Paragragh = styled.span`
 export const Info = styled.span`
   white-space: pre-line;
   font-size: 1.2rem;
-  padding: 0 1.5rem;
   font-weight: 800;
   animation: ${fadeInUp} 0.5s ease-out;
   color: ${(props) => props.theme.color.primary};
 `;
 
 export const ParagraphWrapper = styled.div`
-  width: 500px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 30px;
