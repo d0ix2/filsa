@@ -1,8 +1,6 @@
-// src/components/ResultModal/ResultModal.style.jsx
 import styled from 'styled-components';
 import { keyframes } from 'styled-components';
 
-// 기존 애니메이션 재사용
 const fadeInUp = keyframes`
   from {
     opacity: 0;
@@ -20,7 +18,7 @@ export const ModalOverlay = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.2);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,10 +39,12 @@ export const ModalBox = styled.div`
 export const ModalTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const TimeText = styled.p`
   font-size: 1.2rem;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const ButtonGroup = styled.div`
@@ -58,6 +58,7 @@ export const ModalButton = styled.button`
   font-size: 1rem;
   padding: 0.75rem 1.5rem;
   border: 1px solid ${(props) => props.theme.color.border};
+  color: ${(props) => props.theme.color.primary};
   border-radius: 8px;
   background-color: transparent;
   cursor: pointer;

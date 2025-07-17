@@ -26,18 +26,21 @@ export const InfoWrapper = styled.div`
   display: flex;
   justify-content: space-between;
   fontsize: 1rem;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const Title = styled.h1`
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: bold;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const Paragragh = styled.span`
   white-space: pre-line;
   font-size: 1.2rem;
   animation: ${fadeInUp} 0.5s ease-out;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const AnswerInput = styled.input`
@@ -47,6 +50,7 @@ export const AnswerInput = styled.input`
   outline: none;
   border: 1px solid ${(props) => props.theme.color.border};
   background-color: ${(props) => props.theme.color.background};
+  color: ${(props) => props.theme.color.border};
   border-radius: 8px;
 `;
 
@@ -57,6 +61,7 @@ export const Button = styled.button`
   text-decoration: none;
   background-color: transparent;
   border: 1px solid ${(props) => props.theme.color.border};
+  color: ${(props) => props.theme.color.primary};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
   outline: none;

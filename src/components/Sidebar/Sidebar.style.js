@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const SidebarWrapper = styled.div`
   position: fixed;
-  left: ${({ isOpen }) => (isOpen ? '0' : '-220px')}; /* 열림/닫힘 */
+  left: ${({ isOpen }) => (isOpen ? '0' : '-220px')}; /* 열림, 닫힘 */
   top: 0;
   height: 100vh;
   width: 200px;
@@ -34,6 +34,7 @@ export const HamburgerButton = styled.button`
   top: 20px;
   left: 20px;
   background: none;
+  color: ${(props) => props.theme.color.primary};
   border: none;
   cursor: pointer;
   z-index: 1100; /* 사이드바보다 위에 있어야 하므로 */
