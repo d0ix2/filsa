@@ -139,9 +139,13 @@ export default function GamePage() {
   return (
     <>
       <Sidebar />
-      <S.GameWrapper>
-        <S.Title>한국어 타이핑 게임</S.Title>
-
+      <S.Container>
+        <S.TitleWrapper>
+                <S.MainTitle>filsa</S.MainTitle>
+                <S.Divider />
+                <S.SubTitle>한국어 타이핑 게임</S.SubTitle>
+                </S.TitleWrapper>
+                <S.GameWrapper>
         <S.InfoWrapper>
           <span>경과 시간: {elapsedTime}초</span>
           <span>진행: {sentenceCount} / 10</span>
@@ -185,6 +189,7 @@ export default function GamePage() {
           <ResultModal time={elapsedTime} onRetry={handleRestart} />
         )}
       </S.GameWrapper>
+      </S.Container>
     </>
   );
 }

@@ -12,28 +12,63 @@ const fadeInUp = keyframes`
   }
 `;
 
-// 반응형으로 변경
-export const FilsaItem = styled.div`
+export const Container = styled.div`
   min-height: 100vh;
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+  align-items: flex-start;
+  padding: 2rem 1.5rem;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    padding: 3rem;
+    padding: 3rem 4rem;
   }
 `;
 
+// 컨테이너로 대체
+// export const FilsaItem = styled.div`
+//   min-height: 100vh;
+//   width: 100%;
+//   padding: 2rem 1rem;
+//   display: flex;
+//   flex-direction: column;
+//   align-items: flex-start;
+//   justify-content: center;
+//   gap: 30px;
+//   box-sizing: border-box;
 
-export const Title = styled.h1`
+//   @media (min-width: 768px) {
+//     padding: 3rem;
+//   }
+// `;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
   margin-bottom: 2rem;
-  font-size: 2rem;
-  font-weight: bold;
+`;
+
+export const MainTitle = styled.h1`
+  font-size: clamp(7rem, 6vw, 4rem); /* 반응형 크기 */
+  font-weight: 800;
   color: ${(props) => props.theme.color.primary};
+  margin: 0;
+`;
+
+export const SubTitle = styled.h2`
+  font-size: 1.25rem;
+  color: ${(props) => props.theme.color.primary};
+  margin-top: 1rem;
+`;
+
+export const Divider = styled.hr`
+  width: 40px;
+  height: 5px;
+  background-color: ${(props) => props.theme.color.primary};
+  border: none;
+  margin: 1rem 0; // 왼쪽 정렬 위함
+  align-self: flex-start;
 `;
 
 export const Paragragh = styled.span`
@@ -54,8 +89,8 @@ export const Info = styled.span`
 export const ParagraphWrapper = styled.div`
   width: 100%;
   display: flex;
+  gap: 1rem;
   flex-direction: column;
-  gap: 30px;
 `;
 
 export const LoadAnotherButton = styled.button`
@@ -70,7 +105,6 @@ export const LoadAnotherButton = styled.button`
   border-radius: 8px;
   outline: none;
   cursor: pointer;
-  align-self: center;
 
   &:hover {
     background-color: ${(props) => props.theme.color.border};

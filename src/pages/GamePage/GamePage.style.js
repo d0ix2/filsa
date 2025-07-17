@@ -25,25 +25,30 @@ const blink = keyframes`
   }
 `;
 
-// 반응형으로 변경
-export const GameWrapper = styled.div`
+
+export const Container = styled.div`
   min-height: 100vh;
-  padding: 2rem 1rem;
   display: flex;
   flex-direction: column;
-  gap: 30px;
-  justify-content: center;
-  align-items: center;
+  align-items: flex-start;
+  padding: 2rem 1.5rem;
   box-sizing: border-box;
 
   @media (min-width: 768px) {
-    padding: 3rem;
+    padding: 3rem 4rem;
   }
+`;
+
+// 반응형으로 변경
+export const GameWrapper = styled.div`
+  min-width: 60vh;
+  display: flex;
+  gap: 1rem;
+  flex-direction: column;
 `;
 
 export const InfoWrapper = styled.div`
   width: 100%;
-  max-width: 500px;
   display: flex;
   justify-content: space-between;
   font-size: 1rem;
@@ -54,6 +59,35 @@ export const InfoWrapper = styled.div`
     gap: 10px;
     align-items: center;
   }
+`;
+
+export const TitleWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+`;
+
+export const MainTitle = styled.h1`
+  font-size: clamp(7rem, 6vw, 4rem); /* 반응형 크기 */
+  font-weight: 800;
+  color: ${(props) => props.theme.color.primary};
+  margin: 0;
+`;
+
+export const SubTitle = styled.h2`
+  font-size: 1.25rem;
+  color: ${(props) => props.theme.color.primary};
+  margin-top: 1rem;
+`;
+
+export const Divider = styled.hr`
+  width: 40px;
+  height: 5px;
+  background-color: ${(props) => props.theme.color.primary};
+  border: none;
+  margin: 1rem 0; // 왼쪽 정렬 위함
+  align-self: flex-start;
 `;
 
 export const Title = styled.h1`
@@ -73,7 +107,6 @@ export const Paragragh = styled.span`
 
 export const AnswerInput = styled.input`
   width: 100%;
-  max-width: 500px;
   padding: 1rem;
   font-size: 1rem;
   outline: none;
@@ -88,8 +121,7 @@ export const AnswerInput = styled.input`
 `;
 
 export const Button = styled.button`
-  width: 100%;
-  max-width: 300px;
+  width: 30vh;
   margin: 0.5rem 0;
   font-size: 1.2rem;
   text-decoration: none;
@@ -100,7 +132,6 @@ export const Button = styled.button`
   border-radius: 8px;
   outline: none;
   cursor: pointer;
-  align-self: center;
 
   ${(props) =>
     props.blink &&

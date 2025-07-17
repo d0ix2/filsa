@@ -4,6 +4,8 @@ export const GlobalStyle = createGlobalStyle`
   body {
     font-optical-sizing: auto;
     font-style: normal;
+    display: flex;
+    align-items: flex-start;
     background-color: ${(props) => props.theme.color.background};
     }
 
