@@ -23,6 +23,7 @@ export const CloseWrapper = styled.div`
 export const CheckboxWrapper = styled.div`
   display: flex;
   align-items: center;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const Button = styled.button`
@@ -30,6 +31,7 @@ export const Button = styled.button`
   font-size: 1.2rem;
   text-decoration: none;
   background-color: transparent;
+  color: ${(props) => props.theme.color.primary};
   border: 1px solid ${(props) => props.theme.color.border};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
@@ -66,6 +68,13 @@ export const TitleText = styled.h1`
 
 export const PlainText = styled.span`
   white-space: pre-line;
+  color: ${(props) => props.theme.color.primary};
+`;
+
+export const HighlightedText = styled.span`
+  white-space: pre-line;
+  font-weight: 800;
+  font-size: 1.1rem;
   color: ${(props) => props.theme.color.primary};
 `;
 
