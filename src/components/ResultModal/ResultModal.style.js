@@ -39,6 +39,7 @@ export const ModalBox = styled.div`
 export const ModalTitle = styled.h2`
   font-size: 1.8rem;
   margin-bottom: 1rem;
+  font-weight: 800;
   color: ${(props) => props.theme.color.primary};
 `;
 

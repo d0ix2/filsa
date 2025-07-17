@@ -150,7 +150,7 @@ export default function GamePage() {
         <S.Paragragh key={targetSentence?.text}>
           {displaySpans.length > 0
             ? displaySpans
-            : targetSentence?.text || '게임을 시작하세요'}
+            : targetSentence?.text || '시작 버튼을 눌러 게임을 시작하세요'}
         </S.Paragragh>
 
         <S.AnswerInput
@@ -166,8 +166,9 @@ export default function GamePage() {
         />
 
         {/* ▶ 시작 버튼 (처음에만) */}
+        {/* 시작 전 깜빡거림 애니메이션 추가 */}
         {!isStarted && !isGameFinished && (
-          <S.Button onClick={handleStart}>▶ 게임 시작</S.Button>
+          <S.Button onClick={handleStart} blink>▶ 게임 시작</S.Button>
         )}
 
         {/* 일시 정지 / 재개 버튼 */}
