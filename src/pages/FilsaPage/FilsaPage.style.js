@@ -24,17 +24,22 @@ export const Title = styled.h1`
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: bold;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const Paragragh = styled.span`
   white-space: pre-line;
+  font-size: 1.1rem;
   animation: ${fadeInUp} 0.5s ease-out;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const Info = styled.span`
   white-space: pre-line;
+  font-size: 1.2rem;
   font-weight: 800;
   animation: ${fadeInUp} 0.5s ease-out;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const ParagraphWrapper = styled.div`
@@ -50,6 +55,7 @@ export const LoadAnotherButton = styled.button`
   font-size: 1.2rem;
   text-decoration: none;
   background-color: transparent;
+  color: ${(props) => props.theme.color.primary};
   border: 1px solid ${(props) => props.theme.color.border};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;

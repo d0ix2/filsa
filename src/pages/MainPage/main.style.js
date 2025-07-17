@@ -13,6 +13,7 @@ export const Title = styled.h1`
   margin-bottom: 2rem;
   font-size: 2rem;
   font-weight: bold;
+  color: ${(props) => props.theme.color.primary};
 `;
 
 export const StyledLink = styled(Link)`
@@ -21,6 +22,7 @@ export const StyledLink = styled(Link)`
   text-decoration: none;
   color: #333;
   border: 1px solid ${(props) => props.theme.color.border};
+  color: ${(props) => props.theme.color.primary};
   padding: 0.75rem 1.5rem;
   border-radius: 8px;
 
@@ -31,4 +33,5 @@ export const StyledLink = styled(Link)`
 
 export const Paragragh = styled.span`
   white-space: pre-line;
+  color: {${(props) => props.theme.color.primary}};
 `;

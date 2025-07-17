@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 import { ThemeProvider } from 'styled-components';
@@ -10,12 +11,17 @@ import JapaneseFilsa from './pages/FilsaPage/JapaneseFilsa';
 import GamePage from './pages/GamePage/GamePage';
 
 function App() {
+  const [currentTheme, setCurrentTheme] = useState('light');
+
   return (
-    <ThemeProvider theme={theme}>
+    <ThemeProvider theme={theme[currentTheme]}>
       <GlobalStyle />
       <Router>
         <Routes>
-          <Route path="/" element={<HomePage />} />
+          <Route
+            path="/"
+            element={<HomePage currentTheme={currentTheme} onThemeChange={(e) => setCurrentTheme(e.target.value)} />}
+          />
           <Route path="/korean" element={<KoreanFilsa />} />
           <Route path="/japanese" element={<JapaneseFilsa />} />
           <Route path="/game" element={<GamePage />} />
