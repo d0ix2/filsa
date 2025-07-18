@@ -26,7 +26,7 @@ export const Dropdown = styled.div`
   position: absolute;
   bottom: 48px;
   right: 0;
-  min-width: 80px;
+  min-width: 90px;
   gap: 1rem;
   background: ${({ theme }) => theme.color.primary};
   border: 1px solid ${({ theme }) => theme.color.border};

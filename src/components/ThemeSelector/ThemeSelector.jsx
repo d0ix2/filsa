@@ -5,7 +5,7 @@ import { FiDroplet } from 'react-icons/fi';
 
 const ThemeSelector = ({ currentTheme, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
-  const themes = ['light', 'dark', 'pink', 'blue', 'green'];
+  const theme = ['light', 'dark', 'pink', 'blue', 'green', 'pixel'];
 
   return (
     <S.ThemeSelectorWrapper>
@@ -17,7 +17,7 @@ const ThemeSelector = ({ currentTheme, onChange }) => {
 </S.ToggleButton>
       {isOpen && (
         <S.Dropdown>
-          {themes.map((theme) => (
+          {theme.map((theme) => (
             <S.Option
               key={theme}
               onClick={(e) => {
@@ -33,6 +33,7 @@ const ThemeSelector = ({ currentTheme, onChange }) => {
               {theme === 'pink' && '핑크'}
               {theme === 'blue' && '블루'}
               {theme === 'green' && '그린'}
+              {theme === 'pixel' && '픽셀'}
             </S.Option>
           ))}
         </S.Dropdown>

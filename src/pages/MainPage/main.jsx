@@ -1,6 +1,7 @@
 import React from 'react';
 import * as S from './main.style';
 
+import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import Popup from '../../components/PopUp/PopUp';
 import ThemeSelector from '../../components/ThemeSelector/ThemeSelector';
 
@@ -11,7 +12,7 @@ const HomePage = ({ currentTheme, onThemeChange }) => {
       <ThemeSelector currentTheme={currentTheme} onChange={onThemeChange} />
 
       <S.TitleWrapper>
-        <S.MainTitle>filsa</S.MainTitle>
+        <FilsaLogo />
         <S.Divider />
         <S.SubTitle>filsa는 하루에 한 문단씩 필사하며 언어를 공부할 수 있는 서비스입니다.</S.SubTitle>
         <S.SubTitle>저작권이 만료된 검증된 문학 작품들 중에서 한 문단을 무작위로 골라 제공합니다.</S.SubTitle>

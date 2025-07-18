@@ -3,6 +3,7 @@ import * as S from './FilsaPage.style';
 import getRandomParagraph from '../../hooks/useRandomParagraph';
 import worksData from '../../data/works-ko.json';
 
+import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import Sidebar from '../../components/Sidebar/Sidebar';
 import DictionaryMenu from '../../components/DictionaryMenu/DictionaryMenu';
 
@@ -25,7 +26,7 @@ const KoreanFilsa = () => {
       <DictionaryMenu />
       <S.Container>
         <S.TitleWrapper>
-        <S.MainTitle>filsa</S.MainTitle>
+        <FilsaLogo />
         <S.Divider />
         <S.SubTitle>한국 문학 필사하기</S.SubTitle>
         </S.TitleWrapper>

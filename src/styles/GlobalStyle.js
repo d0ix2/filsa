@@ -1,13 +1,21 @@
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
+
+@font-face {
+  font-family: 'DungGeunMo';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/DungGeunMo.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
   body {
     font-optical-sizing: auto;
     font-style: normal;
+    font-family: ${({ theme }) => theme.font || 'inherit'};
     display: flex;
     align-items: flex-start;
     background-color: ${(props) => props.theme.color.background};
-    }
 
   button {
     outline: none;
@@ -48,7 +56,7 @@ pre {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font: inherit;
+  font-family: ${({ theme }) => theme.font || 'inherit'};
   vertical-align: baseline;
 
   *::placeholder {

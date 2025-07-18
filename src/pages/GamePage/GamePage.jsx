@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import works from '../../data/works-typing.json';
 import * as S from './GamePage.style';
 
+import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import ResultModal from '../../components/ResultModal/ResultModal';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
@@ -141,7 +142,7 @@ export default function GamePage() {
       <Sidebar />
       <S.Container>
         <S.TitleWrapper>
-                <S.MainTitle>filsa</S.MainTitle>
+                <FilsaLogo />
                 <S.Divider />
                 <S.SubTitle>한국어 타이핑 게임</S.SubTitle>
                 </S.TitleWrapper>
