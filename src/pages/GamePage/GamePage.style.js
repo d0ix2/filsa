@@ -18,7 +18,7 @@ const blink = keyframes`
     opacity: 1;
   }
   50% {
-    opacity: 0.3;
+    opacity: 0.2;
   }
   100% {
     opacity: 1;
@@ -50,14 +50,16 @@ export const GameWrapper = styled.div`
 export const InfoWrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+  align-items: flex-start;
   font-size: 1rem;
+  gap: 10px;
   color: ${(props) => props.theme.color.primary};
 
   @media (max-width: 480px) {
     flex-direction: column;
     gap: 10px;
-    align-items: center;
+    align-items: flex-start;
   }
 `;
 
@@ -99,6 +101,7 @@ export const Title = styled.h1`
 
 export const Paragragh = styled.span`
   white-space: pre-line;
+  margin: 1rem 0;
   font-size: 1.2rem;
   font-weight: 500;
   animation: ${fadeInUp} 0.5s ease-out;
@@ -107,6 +110,9 @@ export const Paragragh = styled.span`
 
 export const AnswerInput = styled.input`
   width: 100%;
+  max-width: 600px; /* PC에서 너무 넓어지지 않도록 */
+  min-width: 0;      /* flex 줄 바꿈 대비 */
+  box-sizing: border-box; /* 패딩과 border 포함한 크기 계산 */
   padding: 1rem;
   font-size: 1rem;
   outline: none;
@@ -119,6 +125,7 @@ export const AnswerInput = styled.input`
     color: ${(props) => props.theme.color.primary};
   }
 `;
+
 
 export const Button = styled.button`
   width: 30vh;
@@ -144,3 +151,20 @@ export const Button = styled.button`
   }
 `;
 
+// 진행도 전체
+export const ProgressBarContainer = styled.div`
+  width: 100%;
+  height: 12px;
+  background-color: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-top: 8px;
+`;
+
+// 실제 진행도
+export const ProgressBarFiller = styled.div`
+  height: 100%;
+  background-color: ${(props) => props.theme.color.primary || '#4caf50'};
+  width: ${(props) => props.percentage}%;
+  transition: width 0.3s ease-in-out;
+`;
