@@ -148,7 +148,9 @@ export default function GamePage() {
                 <S.GameWrapper>
         <S.InfoWrapper>
           <span>경과 시간: {elapsedTime}초</span>
-          <span>진행: {sentenceCount} / 10</span>
+          <S.ProgressBarContainer>
+  <S.ProgressBarFiller percentage={(sentenceCount / 10) * 100} />
+</S.ProgressBarContainer>
         </S.InfoWrapper>
 
         <S.Paragragh key={targetSentence?.text}>

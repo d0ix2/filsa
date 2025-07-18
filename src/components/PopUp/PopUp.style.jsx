@@ -3,8 +3,8 @@ import styled from 'styled-components';
 export const PopupWrapper = styled.div`
   position: fixed;
   top: 50%;
-  right: 50%;
-  transform: translate(-50%, -50%); // 중앙 정렬
+  left: 50%; /* ✅ 중앙 정렬 기준을 right → left로 수정 */
+  transform: translate(-50%, -50%);
   width: 90vw;
   max-width: 450px;
   max-height: 90vh;
@@ -20,12 +20,14 @@ export const PopupWrapper = styled.div`
 
   @media (min-width: 768px) {
     top: 80px;
-    right: 80px;
-    transform: none;
+    right: 80px;       /* PC에서는 우상단에 배치 */
+    left: auto;         /* 모바일용 left를 제거 */
+    transform: none;    /* 중앙 정렬 해제 */
     width: auto;
     max-height: none;
   }
 `;
+
 
 
 export const CloseWrapper = styled.div`

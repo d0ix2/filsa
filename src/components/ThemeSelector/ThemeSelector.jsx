@@ -1,15 +1,20 @@
 import React, { useState } from 'react';
 import * as S from './ThemeSelector.style'
 
+import { FiDroplet } from 'react-icons/fi';
+
 const ThemeSelector = ({ currentTheme, onChange }) => {
   const [isOpen, setIsOpen] = useState(false);
   const themes = ['light', 'dark', 'pink', 'blue', 'green'];
 
   return (
     <S.ThemeSelectorWrapper>
-      <S.ToggleButton onClick={() => setIsOpen(!isOpen)}>
-        테마 선택 ⌄
-      </S.ToggleButton>
+      <S.ToggleButton
+  themeColor={currentTheme}
+  onClick={() => setIsOpen(!isOpen)}
+>
+  <FiDroplet size={20} />
+</S.ToggleButton>
       {isOpen && (
         <S.Dropdown>
           {themes.map((theme) => (
