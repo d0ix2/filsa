@@ -37,11 +37,11 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     padding: 3rem 4rem;
   }
-`;
+`
 
 // 반응형으로 변경
 export const GameWrapper = styled.div`
-  min-width: 60vh;
+  width: 100%;
   display: flex;
   gap: 1rem;
   flex-direction: column;
@@ -110,7 +110,6 @@ export const Paragragh = styled.span`
 
 export const AnswerInput = styled.input`
   width: 100%;
-  max-width: 600px; /* PC에서 너무 넓어지지 않도록 */
   min-width: 0;      /* flex 줄 바꿈 대비 */
   box-sizing: border-box; /* 패딩과 border 포함한 크기 계산 */
   padding: 1rem;
@@ -146,7 +145,7 @@ export const Button = styled.button`
       animation: ${blink} 1s infinite;
     `}
 
-  &:hover {
+    &:hover {
     background-color: ${(props) => props.theme.color.border};
   }
 `;

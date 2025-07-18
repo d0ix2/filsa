@@ -1,5 +1,6 @@
 const theme = {
   light: {
+    name: 'light',
     color: {
       primary: '#000000',
       background: '#FFFFFF',
@@ -9,6 +10,7 @@ const theme = {
     font: 'system-ui',
   },
   dark: {
+    name: 'dark',
     color: {
       primary: '#FFFFFF',
       background: '#000000',
@@ -18,6 +20,7 @@ const theme = {
     font: 'system-ui',
   },
   pink: {
+    name: 'pink',
     color: {
       primary: '#FFFFFF',
       background: '#F1A7BC',
@@ -27,6 +30,7 @@ const theme = {
     font: 'system-ui',
   },
   blue: {
+    name: 'blue',
     color: {
       primary: '#FFFFFF',
       background: '#89BFF8',
@@ -36,6 +40,7 @@ const theme = {
     font: 'system-ui',
   },
   green: {
+    name: 'green',
     color: {
       primary: '#FFFFFF',
       background: '#A1D99B',
@@ -45,6 +50,7 @@ const theme = {
     font: 'system-ui',
   },
   pixel: {
+    name: 'pixel',
     color: {
       primary: '#00FF00',             
       background: '#000000',          
