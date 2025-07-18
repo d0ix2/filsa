@@ -66,6 +66,6 @@ export const ModalButton = styled.button`
   transition: background-color 0.2s ease;
 
   &:hover {
-    background-color: ${(props) => props.theme.color.background};
+    background-color: ${(props) => props.theme.color.border};
   }
 `;

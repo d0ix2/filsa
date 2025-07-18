@@ -1,4 +1,4 @@
-const themes = {
+const theme = {
   light: {
     color: {
       primary: '#000000',
@@ -6,6 +6,7 @@ const themes = {
       border: '#CCCCCC',
       coloredText: '#B2B1B2',
     },
+    font: 'system-ui',
   },
   dark: {
     color: {
@@ -14,6 +15,7 @@ const themes = {
       border: '#444444',
       coloredText: '#888888',
     },
+    font: 'system-ui',
   },
   pink: {
     color: {
@@ -22,6 +24,7 @@ const themes = {
       border: '#EA7B9B',
       coloredText: '#E20579',
     },
+    font: 'system-ui',
   },
   blue: {
     color: {
@@ -30,6 +33,7 @@ const themes = {
       border: '#408EE0',
       coloredText: '#1B75BE',
     },
+    font: 'system-ui',
   },
   green: {
     color: {
@@ -38,7 +42,18 @@ const themes = {
       border: '#74C476',
       coloredText: '#41AB5D',
     },
+    font: 'system-ui',
+  },
+  pixel: {
+    color: {
+      primary: '#00FF00',             
+      background: '#000000',          
+      border: '#8722FA',              
+      coloredText: '#8722FA',         
+    },
+    font: 'DungGeunMo',
+    // 일본어 적용 안 되는 문제
   },
 };
 
-export default themes;
+export default theme;

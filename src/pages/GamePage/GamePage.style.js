@@ -164,7 +164,7 @@ export const ProgressBarContainer = styled.div`
 // 실제 진행도
 export const ProgressBarFiller = styled.div`
   height: 100%;
-  background-color: ${(props) => props.theme.color.primary || '#4caf50'};
+  background-color: ${(props) => props.theme.color.coloredText};
   width: ${(props) => props.percentage}%;
   transition: width 0.3s ease-in-out;
 `;
