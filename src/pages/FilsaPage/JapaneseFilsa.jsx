@@ -26,9 +26,9 @@ const JapaneseFilsa = () => {
       <DictionaryMenu />
       <S.Container>
         <S.TitleWrapper>
-        <FilsaLogo />
-        <S.Divider />
-        <S.SubTitle>일본 문학 필사하기</S.SubTitle>
+          <FilsaLogo />
+          <S.Divider />
+          <S.SubTitle>일본 문학 필사하기</S.SubTitle>
         </S.TitleWrapper>
         {quote ? (
           <S.ParagraphWrapper>

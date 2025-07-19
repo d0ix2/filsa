@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import works from '../../data/works-typing-kr.json';
+import works from '../../data/works-typing-jp.json';
 import * as S from './GamePage.style';
 
 import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import ResultModal from '../../components/ResultModal/ResultModal';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
-export default function KRGamePage() {
+export default function JPGamePage() {
   const [targetSentence, setTargetSentence] = useState(null);
   const [input, setInput] = useState('');
   const [displaySpans, setDisplaySpans] = useState([]);
@@ -144,7 +144,7 @@ export default function KRGamePage() {
         <S.TitleWrapper>
           <FilsaLogo />
           <S.Divider />
-          <S.SubTitle>한국어 타이핑 게임</S.SubTitle>
+          <S.SubTitle>일본어 타이핑 게임</S.SubTitle>
         </S.TitleWrapper>
         <S.GameWrapper>
           <S.InfoWrapper>
@@ -154,6 +154,10 @@ export default function KRGamePage() {
             </S.ProgressBarContainer>
           </S.InfoWrapper>
 
+          {/* 요미가나 표기 */}
+          {targetSentence?.gana && <S.Gana>{targetSentence.gana}</S.Gana>}
+
+          {/* 실제 판정 기준: 일본어 한자 */}
           <S.Paragragh key={targetSentence?.text}>
             {displaySpans.length > 0
               ? displaySpans

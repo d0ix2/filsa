@@ -27,6 +27,9 @@ const Sidebar = () => {
         <S.NavLink to="/game-kr" onClick={closeSidebar}>
           한국어 타이핑 게임
         </S.NavLink>
+        <S.NavLink to="/game-jp" onClick={closeSidebar}>
+          일본어 타이핑 게임
+        </S.NavLink>
       </S.SidebarWrapper>
 
       {isOpen && <S.Overlay onClick={closeSidebar} />}

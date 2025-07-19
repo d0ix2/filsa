@@ -20,15 +20,13 @@ export const PopupWrapper = styled.div`
 
   @media (min-width: 768px) {
     top: 80px;
-    right: 80px;       /* PC에서는 우상단에 배치 */
-    left: auto;         /* 모바일용 left를 제거 */
-    transform: none;    /* 중앙 정렬 해제 */
+    right: 80px; /* PC에서는 우상단에 배치 */
+    left: auto; /* 모바일용 left를 제거 */
+    transform: none; /* 중앙 정렬 해제 */
     width: auto;
     max-height: none;
   }
 `;
-
-
 
 export const CloseWrapper = styled.div`
   display: flex;

@@ -1,4 +1,4 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes, css } from 'styled-components';
 import { Link } from 'react-router-dom';
 
 const neonGlow = keyframes`
@@ -36,7 +36,9 @@ export const MainTitle = styled(Link)`
     theme.name === 'pixel' &&
     css`
       animation: ${neonGlow} 1.5s infinite alternate;
-      text-shadow: 0 0 2px #00FF00, 0 0 4px #00FF00;
+      text-shadow:
+        0 0 2px #00ff00,
+        0 0 4px #00ff00;
     `}
 
   // 네온 테마가 아닐 때: 페이드인 효과

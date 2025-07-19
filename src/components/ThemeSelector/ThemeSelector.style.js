@@ -21,7 +21,6 @@ export const ToggleButton = styled.div`
   color: ${({ theme }) => theme.color.primary};
 `;
 
-
 export const Dropdown = styled.div`
   position: absolute;
   bottom: 48px;

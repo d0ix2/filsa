@@ -52,10 +52,10 @@ const theme = {
   pixel: {
     name: 'pixel',
     color: {
-      primary: '#00FF00',             
-      background: '#000000',          
-      border: '#8722FA',              
-      coloredText: '#8722FA',         
+      primary: '#00FF00',
+      background: '#000000',
+      border: '#8722FA',
+      coloredText: '#8722FA',
     },
     font: 'DungGeunMo',
     // 일본어 적용 안 되는 문제

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import * as S from './ThemeSelector.style'
+import * as S from './ThemeSelector.style';
 
 import { FiDroplet } from 'react-icons/fi';
 
@@ -10,11 +10,11 @@ const ThemeSelector = ({ currentTheme, onChange }) => {
   return (
     <S.ThemeSelectorWrapper>
       <S.ToggleButton
-  themeColor={currentTheme}
-  onClick={() => setIsOpen(!isOpen)}
->
-  <FiDroplet size={20} />
-</S.ToggleButton>
+        themeColor={currentTheme}
+        onClick={() => setIsOpen(!isOpen)}
+      >
+        <FiDroplet size={20} />
+      </S.ToggleButton>
       {isOpen && (
         <S.Dropdown>
           {theme.map((theme) => (

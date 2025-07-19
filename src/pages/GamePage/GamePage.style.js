@@ -25,7 +25,6 @@ const blink = keyframes`
   }
 `;
 
-
 export const Container = styled.div`
   min-height: 100vh;
   display: flex;
@@ -37,7 +36,7 @@ export const Container = styled.div`
   @media (min-width: 768px) {
     padding: 3rem 4rem;
   }
-`
+`;
 
 // 반응형으로 변경
 export const GameWrapper = styled.div`
@@ -101,8 +100,17 @@ export const Title = styled.h1`
 
 export const Paragragh = styled.span`
   white-space: pre-line;
-  margin: 1rem 0;
+  margin-bottom: 1rem;
   font-size: 1.2rem;
+  font-weight: 500;
+  animation: ${fadeInUp} 0.5s ease-out;
+  color: ${(props) => props.theme.color.primary};
+`;
+
+export const Gana = styled.span`
+  white-space: pre-line;
+  font-size: 1rem;
+  margin-top: 1rem;
   font-weight: 500;
   animation: ${fadeInUp} 0.5s ease-out;
   color: ${(props) => props.theme.color.primary};
@@ -110,7 +118,7 @@ export const Paragragh = styled.span`
 
 export const AnswerInput = styled.input`
   width: 100%;
-  min-width: 0;      /* flex 줄 바꿈 대비 */
+  min-width: 0; /* flex 줄 바꿈 대비 */
   box-sizing: border-box; /* 패딩과 border 포함한 크기 계산 */
   padding: 1rem;
   font-size: 1rem;
@@ -124,7 +132,6 @@ export const AnswerInput = styled.input`
     color: ${(props) => props.theme.color.primary};
   }
 `;
-
 
 export const Button = styled.button`
   width: 30vh;
@@ -145,7 +152,7 @@ export const Button = styled.button`
       animation: ${blink} 1s infinite;
     `}
 
-    &:hover {
+  &:hover {
     background-color: ${(props) => props.theme.color.border};
   }
 `;
