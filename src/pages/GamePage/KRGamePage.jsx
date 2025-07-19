@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import works from '../../data/works-typing.json';
+import works from '../../data/works-typing-kr.json';
 import * as S from './GamePage.style';
 
 import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import ResultModal from '../../components/ResultModal/ResultModal';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
-export default function GamePage() {
+export default function KRGamePage() {
   const [targetSentence, setTargetSentence] = useState(null);
   const [input, setInput] = useState('');
   const [displaySpans, setDisplaySpans] = useState([]);
@@ -142,56 +142,58 @@ export default function GamePage() {
       <Sidebar />
       <S.Container>
         <S.TitleWrapper>
-                <FilsaLogo />
-                <S.Divider />
-                <S.SubTitle>한국어 타이핑 게임</S.SubTitle>
-                </S.TitleWrapper>
-                <S.GameWrapper>
-        <S.InfoWrapper>
-          <span>경과 시간: {elapsedTime}초</span>
-          <S.ProgressBarContainer>
-  <S.ProgressBarFiller percentage={(sentenceCount / 10) * 100} />
-</S.ProgressBarContainer>
-        </S.InfoWrapper>
+          <FilsaLogo />
+          <S.Divider />
+          <S.SubTitle>한국어 타이핑 게임</S.SubTitle>
+        </S.TitleWrapper>
+        <S.GameWrapper>
+          <S.InfoWrapper>
+            <span>경과 시간: {elapsedTime}초</span>
+            <S.ProgressBarContainer>
+              <S.ProgressBarFiller percentage={(sentenceCount / 10) * 100} />
+            </S.ProgressBarContainer>
+          </S.InfoWrapper>
 
-        <S.Paragragh key={targetSentence?.text}>
-          {displaySpans.length > 0
-            ? displaySpans
-            : targetSentence?.text || '시작 버튼을 눌러 게임을 시작하세요'}
-        </S.Paragragh>
+          <S.Paragragh key={targetSentence?.text}>
+            {displaySpans.length > 0
+              ? displaySpans
+              : targetSentence?.text || '시작 버튼을 눌러 게임을 시작하세요'}
+          </S.Paragragh>
 
-        <S.AnswerInput
-          ref={inputRef}
-          type="text"
-          value={input}
-          onChange={handleInputChange}
-          onKeyDown={handleKeyDown}
-          onCompositionStart={handleCompositionStart}
-          onCompositionEnd={handleCompositionEnd}
-          disabled={!isStarted || isPaused || isGameFinished}
-          placeholder="위 문장을 입력하고 Enter를 누르세요"
-        />
+          <S.AnswerInput
+            ref={inputRef}
+            type="text"
+            value={input}
+            onChange={handleInputChange}
+            onKeyDown={handleKeyDown}
+            onCompositionStart={handleCompositionStart}
+            onCompositionEnd={handleCompositionEnd}
+            disabled={!isStarted || isPaused || isGameFinished}
+            placeholder="위 문장을 입력하고 Enter를 누르세요"
+          />
 
-        {/* ▶ 시작 버튼 (처음에만) */}
-        {/* 시작 전 깜빡거림 애니메이션 추가 */}
-        {!isStarted && !isGameFinished && (
-          <S.Button onClick={handleStart} blink>▶ 게임 시작</S.Button>
-        )}
+          {/* ▶ 시작 버튼 (처음에만) */}
+          {/* 시작 전 깜빡거림 애니메이션 추가 */}
+          {!isStarted && !isGameFinished && (
+            <S.Button onClick={handleStart} blink>
+              ▶ 게임 시작
+            </S.Button>
+          )}
 
-        {/* 일시 정지 / 재개 버튼 */}
-        {isStarted &&
-          !isGameFinished &&
-          (isPaused ? (
-            <S.Button onClick={handleResume}>▶ 다시 시작</S.Button>
-          ) : (
-            <S.Button onClick={handlePause}>⏸ 일시 정지</S.Button>
-          ))}
+          {/* 일시 정지 / 재개 버튼 */}
+          {isStarted &&
+            !isGameFinished &&
+            (isPaused ? (
+              <S.Button onClick={handleResume}>▶ 다시 시작</S.Button>
+            ) : (
+              <S.Button onClick={handlePause}>⏸ 일시 정지</S.Button>
+            ))}
 
-        {/* 결과 모달 */}
-        {isGameFinished && (
-          <ResultModal time={elapsedTime} onRetry={handleRestart} />
-        )}
-      </S.GameWrapper>
+          {/* 결과 모달 */}
+          {isGameFinished && (
+            <ResultModal time={elapsedTime} onRetry={handleRestart} />
+          )}
+        </S.GameWrapper>
       </S.Container>
     </>
   );

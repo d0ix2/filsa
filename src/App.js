@@ -8,7 +8,8 @@ import theme from './styles/theme';
 import HomePage from './pages/MainPage/main';
 import KoreanFilsa from './pages/FilsaPage/KoreanFilsa';
 import JapaneseFilsa from './pages/FilsaPage/JapaneseFilsa';
-import GamePage from './pages/GamePage/GamePage';
+import KRGamePage from './pages/GamePage/KRGamePage';
+import JPGamePage from './pages/GamePage/JPGamePage';
 
 function App() {
   const [currentTheme, setCurrentTheme] = useState('light');
@@ -20,11 +21,17 @@ function App() {
         <Routes>
           <Route
             path="/"
-            element={<HomePage currentTheme={currentTheme} onThemeChange={(e) => setCurrentTheme(e.target.value)} />}
+            element={
+              <HomePage
+                currentTheme={currentTheme}
+                onThemeChange={(e) => setCurrentTheme(e.target.value)}
+              />
+            }
           />
           <Route path="/korean" element={<KoreanFilsa />} />
           <Route path="/japanese" element={<JapaneseFilsa />} />
-          <Route path="/game" element={<GamePage />} />
+          <Route path="/game-kr" element={<KRGamePage />} />
+          <Route path="/game-jp" element={<JPGamePage />} />
         </Routes>
       </Router>
     </ThemeProvider>

@@ -1,4 +1,5 @@
-import styled, { keyframes, css } from "styled-components";
+import styled, { keyframes, css } from 'styled-components';
+import { Link } from 'react-router-dom';
 
 const neonGlow = keyframes`
   0% {
@@ -24,7 +25,7 @@ const fadeInUp = keyframes`
   }
 `;
 
-export const MainTitle = styled.h1`
+export const MainTitle = styled(Link)`
   font-size: clamp(7rem, 6vw, 4rem); /* 반응형 크기 */
   font-weight: 800;
   color: ${(props) => props.theme.color.primary};
@@ -35,7 +36,9 @@ export const MainTitle = styled.h1`
     theme.name === 'pixel' &&
     css`
       animation: ${neonGlow} 1.5s infinite alternate;
-      text-shadow: 0 0 2px #00FF00, 0 0 4px #00FF00;
+      text-shadow:
+        0 0 2px #00ff00,
+        0 0 4px #00ff00;
     `}
 
   // 네온 테마가 아닐 때: 페이드인 효과
