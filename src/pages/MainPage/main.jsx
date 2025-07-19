@@ -21,7 +21,7 @@ const HomePage = ({ currentTheme, onThemeChange }) => {
 
       <S.StyledLink to="/korean">한국 문학 필사하기</S.StyledLink>
       <S.StyledLink to="/japanese">일본 문학 필사하기</S.StyledLink>
-      <S.StyledLink to="/game">한국어 타이핑 게임</S.StyledLink>
+      <S.StyledLink to="/game-kr">한국어 타이핑 게임</S.StyledLink>
     </S.Container>
   );
 };

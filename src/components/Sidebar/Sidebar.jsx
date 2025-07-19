@@ -24,7 +24,7 @@ const Sidebar = () => {
         <S.NavLink to="/japanese" onClick={closeSidebar}>
           일본 문학 필사하기
         </S.NavLink>
-        <S.NavLink to="/game" onClick={closeSidebar}>
+        <S.NavLink to="/game-kr" onClick={closeSidebar}>
           한국어 타이핑 게임
         </S.NavLink>
       </S.SidebarWrapper>

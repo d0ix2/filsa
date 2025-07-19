@@ -1,12 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
-import works from '../../data/works-typing.json';
+import works from '../../data/works-typing-kr.json';
 import * as S from './GamePage.style';
 
 import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import ResultModal from '../../components/ResultModal/ResultModal';
 import Sidebar from '../../components/Sidebar/Sidebar';
 
-export default function GamePage() {
+export default function KRGamePage() {
   const [targetSentence, setTargetSentence] = useState(null);
   const [input, setInput] = useState('');
   const [displaySpans, setDisplaySpans] = useState([]);
@@ -143,7 +143,7 @@ export default function GamePage() {
       <S.Container>
         <S.TitleWrapper>
                 <FilsaLogo />
-                <S.Divider />
+                <S.Divider /> 
                 <S.SubTitle>한국어 타이핑 게임</S.SubTitle>
                 </S.TitleWrapper>
                 <S.GameWrapper>

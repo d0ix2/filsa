@@ -3,7 +3,11 @@ import theme from '../../styles/theme';
 
 const FilsaLogo = () => {
     return (
-    <S.MainTitle key={theme.name}>filsa</S.MainTitle>
+    <S.MainTitle 
+        to='/'
+        key={theme.name}>
+            filsa
+    </S.MainTitle>
     )
 }
 
