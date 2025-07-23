@@ -8,7 +8,7 @@ const JapaneseBookshelf = () => {
   return (
     <>
       <Sidebar />
-      <Bookshelf works={worksData} language="jp" />;
+      <Bookshelf works={worksData} language="jp" />
     </>
   );
 };
