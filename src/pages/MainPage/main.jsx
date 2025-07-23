@@ -5,7 +5,7 @@ import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
 import Popup from '../../components/PopUp/PopUp';
 import ThemeSelector from '../../components/ThemeSelector/ThemeSelector';
 
-const HomePage = ({ currentTheme, onThemeChange }) => {
+const MainPage = ({ currentTheme, onThemeChange }) => {
   return (
     <S.Container>
       <Popup />
@@ -26,12 +26,12 @@ const HomePage = ({ currentTheme, onThemeChange }) => {
         </S.SubTitle>
       </S.TitleWrapper>
 
-      <S.StyledLink to="/korean">한국 문학 필사하기</S.StyledLink>
-      <S.StyledLink to="/japanese">일본 문학 필사하기</S.StyledLink>
-      <S.StyledLink to="/game-kr">한국어 타이핑 게임</S.StyledLink>
-      <S.StyledLink to="/game-jp">일본어 타이핑 게임</S.StyledLink>
+      <S.StyledLink to="/korean-selecting">한국 문학 필사하기</S.StyledLink>
+      <S.StyledLink to="/japanese-selecting">일본 문학 필사하기</S.StyledLink>
+      <S.StyledLink to="/korean-game">한국어 타이핑 게임</S.StyledLink>
+      <S.StyledLink to="/japanese-game">일본어 타이핑 게임</S.StyledLink>
     </S.Container>
   );
 };
 
-export default HomePage;
+export default MainPage;

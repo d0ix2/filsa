@@ -18,16 +18,16 @@ const Sidebar = () => {
         <S.NavLink to="/" onClick={closeSidebar}>
           홈으로
         </S.NavLink>
-        <S.NavLink to="/korean" onClick={closeSidebar}>
+        <S.NavLink to="/korean-selecting" onClick={closeSidebar}>
           한국 문학 필사하기
         </S.NavLink>
-        <S.NavLink to="/japanese" onClick={closeSidebar}>
+        <S.NavLink to="/japanese-selecting" onClick={closeSidebar}>
           일본 문학 필사하기
         </S.NavLink>
-        <S.NavLink to="/game-kr" onClick={closeSidebar}>
+        <S.NavLink to="/korean-game" onClick={closeSidebar}>
           한국어 타이핑 게임
         </S.NavLink>
-        <S.NavLink to="/game-jp" onClick={closeSidebar}>
+        <S.NavLink to="/japanese-game" onClick={closeSidebar}>
           일본어 타이핑 게임
         </S.NavLink>
       </S.SidebarWrapper>
