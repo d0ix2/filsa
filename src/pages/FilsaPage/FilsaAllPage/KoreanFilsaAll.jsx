@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import * as S from './FilsaPage.style';
-import getRandomParagraph from '../../hooks/useRandomParagraph';
-import worksData from '../../data/works-jp.json';
+import * as S from '../FilsaPage.style';
+import getRandomParagraph from '../../../hooks/useRandomParagraph';
+import worksData from '../../../data/works-ko.json';
 
-import FilsaLogo from '../../components/FilsaLogo/FilsaLogo';
-import Sidebar from '../../components/Sidebar/Sidebar';
-import DictionaryMenu from '../../components/DictionaryMenu/DictionaryMenu';
+import FilsaLogo from '../../../components/FilsaLogo/FilsaLogo';
+import Sidebar from '../../../components/Sidebar/Sidebar';
+import DictionaryMenu from '../../../components/DictionaryMenu/DictionaryMenu';
 
-const JapaneseFilsa = () => {
+const KoreanFilsaAll = () => {
   const [quote, setQuote] = useState(null);
 
   useEffect(() => {
@@ -28,7 +28,7 @@ const JapaneseFilsa = () => {
         <S.TitleWrapper>
           <FilsaLogo />
           <S.Divider />
-          <S.SubTitle>일본 문학 필사하기</S.SubTitle>
+          <S.SubTitle>한국 문학 필사하기</S.SubTitle>
         </S.TitleWrapper>
         {quote ? (
           <S.ParagraphWrapper>
@@ -48,4 +48,4 @@ const JapaneseFilsa = () => {
   );
 };
 
-export default JapaneseFilsa;
+export default KoreanFilsaAll;
