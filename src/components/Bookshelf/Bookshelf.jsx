@@ -15,7 +15,7 @@ const Bookshelf = ({ works, language }) => {
         />
       ))}
     </S.ShelfContainer>
-  );
+  )
 };
 
 export default Bookshelf;

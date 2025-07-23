@@ -8,7 +8,7 @@ const KoreanBookshelf = () => {
   return (
     <>
       <Sidebar />
-      <Bookshelf works={worksData} language="ko" />;
+      <Bookshelf works={worksData} language="ko" />
     </>
   );
 };
