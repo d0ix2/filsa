@@ -1,21 +1,36 @@
 import styled from 'styled-components';
 
-export const ShelfContainer = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+export const ShelfWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
   gap: 2rem;
   padding: 2rem;
-  justify-items: center;
+`;
 
-  @media (min-width: 1200px) {
-    grid-template-columns: repeat(5, 1fr);
-  }
+export const RowWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+`;
 
-  @media (max-width: 1199px) and (min-width: 800px) {
-    grid-template-columns: repeat(3, 1fr);
-  }
+export const FlexRow = styled.div`
+  display: flex;
+  margin-left: 2rem;
+  flex-wrap: nowrap;
+  gap: 2rem;
+`;
 
-  @media (max-width: 799px) {
-    grid-template-columns: repeat(2, 1fr);
-  }
+export const BookWrapper = styled.div`
+  flex: 0 0 160px;
+  max-width: 160px;
+`;
+
+export const Divider = styled.div`
+  height: 8px;
+  background-color: #ccc;
+  border-radius: 8px;
+  align-self: center;
+  margin: 2rem 0 0;
+  width: 100%;
 `;
