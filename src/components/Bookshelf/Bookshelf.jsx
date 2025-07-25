@@ -20,7 +20,9 @@ const chunkArray = (arr, size) => {
 };
 
 const Bookshelf = ({ works, language }) => {
-  const [itemsPerRow, setItemsPerRow] = useState(getItemsPerRow(window.innerWidth));
+  const [itemsPerRow, setItemsPerRow] = useState(
+    getItemsPerRow(window.innerWidth)
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -56,4 +58,3 @@ const Bookshelf = ({ works, language }) => {
 };
 
 export default Bookshelf;
-

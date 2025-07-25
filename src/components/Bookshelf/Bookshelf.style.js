@@ -28,7 +28,7 @@ export const BookWrapper = styled.div`
 
 export const Divider = styled.div`
   height: 8px;
-  background-color: #ccc;
+  background-color: ${(props) => props.theme.color.primary};
   border-radius: 8px;
   align-self: center;
   margin: 2rem 0 0;
