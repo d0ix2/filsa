@@ -44,7 +44,7 @@ const Popup = () => {
           </S.PlainText>
           <S.PlainText>
             2. 타이핑 연습이 필요하신가요?{' '}
-            <S.HighlightedText>'한국어 타이핑 게임' 메뉴</S.HighlightedText>를
+            <S.HighlightedText>'타이핑 게임' 메뉴</S.HighlightedText>를
             이용해 보세요. 문학 작품에서 랜덤으로 가져 온 문장을 이용해 타이핑을
             연습할 수 있습니다. 타이핑에 걸린 총 소요 시간을 측정해 드려요.
           </S.PlainText>
