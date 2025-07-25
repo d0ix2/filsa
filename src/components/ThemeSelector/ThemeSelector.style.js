@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ThemeSelectorWrapper = styled.div`
-  position: absolute;
+  position: fixed; 
   bottom: 20px;
   right: 20px;
   text-align: right;
